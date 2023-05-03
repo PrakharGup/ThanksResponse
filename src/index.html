@@ -8,10 +8,14 @@
   <title>Vanilla JavaScript App</title>
 </head>
 
-<body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
-</body>
+<script>
+  var windowWidth = 400;
+  var windowHeight = 200;
+  var xPos = (screen.width / 2) - (windowWidth / 2);
+  var yPos = (screen.height / 2) - (windowHeight / 2);
+  const popupWindow = window.open("popup.html", "POPUP", "width=" + windowWidth + ",height=" + windowHeight + ",left=" + xPos + ",top=" + yPos);   
+</script>
+
+<body onload="setTimeout(() => window.close(), 0)"></body>
 
 </html>
